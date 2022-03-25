@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DanielGithubUsers</string>
+    <string name="title_activity_detail_user">DetailUserActivity</string>
+    <string name="tab_text_1">Home</string>
+    <string name="tab_text_2">Profile</string>
+    <string name="content_tab_following">Following</string>
+    <string name="content_tab_follower">Follower</string>
+    <string name="not_found">Not found</string>
+    <string name="company">company</string>
+    <string name="location">location</string>
+    <string name="full_name">Full Name</string>
+    <string name="username">username</string>
+</resources>
