@@ -6,7 +6,7 @@ import retrofit2.http.*
 interface ApiService {
     @GET("search/users")
     fun getUser(
-        @Query("username") username: String
+        @Query("q") username: String
     ): Call<UserResponse>
 }
 

@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     companion object {
         private const val TAG = "MainActivity"
-        private const val USER_ID = "sidiqpermana"
+        private const val USER_ID = "nieelz"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,10 +27,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.hide()
-        val layoutManager = LinearLayoutManager(this)
-        binding.rvUser.layoutManager = layoutManager
-        val itemDecoration = DividerItemDecoration(this, layoutManager.orientation)
-        binding.rvUser.addItemDecoration(itemDecoration)
+
         setUserData()
     }
 
@@ -61,16 +58,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUserData(userList: List<ItemsItem>) {
-        val listUser = ArrayList<String>()
-        for (user in userList) {
-            listUser.add(
-                """
-                ${user.avatarUrl}
-                - ${user.login}
-                """.trimIndent()
-            )
+            binding.rvUser.apply{
+                layoutManager = LinearLayoutManager(this@MainActivity)
+                adapter = UserAdapter(userList)
+            }
         }
-    }
 
     private fun showLoading(isLoading: Boolean) {
         if (isLoading) {
@@ -79,7 +71,12 @@ class MainActivity : AppCompatActivity() {
             binding.progressBar.visibility = View.GONE
         }
     }
+
+
+
 }
+
+
 
 //    private fun searchView() {
 //        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
