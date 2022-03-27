@@ -2,7 +2,6 @@ package com.dicoding.picodiploma.danielgithubusers
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
@@ -14,7 +13,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 class DetailUserActivity : AppCompatActivity() {
 
     companion object {
-        const val USER_ID = "sidiqpermana"
+        const val USER_ID = "nieelz"
 
         @StringRes
         private val TAB_TITLES = intArrayOf(

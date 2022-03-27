@@ -6,8 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.dicoding.picodiploma.danielgithubusers.databinding.RowUserBinding
 
-class UserAdapter(private val listUser: List<ItemsItem>) : RecyclerView.Adapter<ViewHolder>() {
-
+class FollowAdapter(private val listUser: ArrayList<FollowUserResponseItem>) : RecyclerView.Adapter<ViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback){
         this.onItemClickCallback = onItemClickCallback
@@ -41,5 +40,5 @@ class UserAdapter(private val listUser: List<ItemsItem>) : RecyclerView.Adapter<
         fun onItemClicked(data: String)
     }
 
+
 }
-class ViewHolder(val binding: RowUserBinding) : RecyclerView.ViewHolder(binding.root)

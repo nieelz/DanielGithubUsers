@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.picodiploma.danielgithubusers.databinding.FragmentFollowerBinding
-import com.dicoding.picodiploma.danielgithubusers.databinding.FragmentFollowingBinding
+
 
 
 class FollowerFragment : Fragment() {

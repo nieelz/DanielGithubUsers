@@ -8,6 +8,8 @@
     tools:context=".DetailUserActivity">
 
 
+
+
     <TextView
         android:id="@+id/tv_user"
         android:layout_width="wrap_content"
@@ -57,9 +59,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/company"
-        app:layout_constraintEnd_toStartOf="@+id/tv_fullname"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_fullname" />
+        app:layout_constraintEnd_toEndOf="@+id/textOnlyCompany"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textOnlyCompany"
+        app:layout_constraintTop_toBottomOf="@+id/textOnlyCompany" />
 
     <TextView
         android:id="@+id/tv_location"
@@ -67,9 +70,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/location"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_fullname"
-        app:layout_constraintTop_toBottomOf="@+id/tv_fullname" />
+        app:layout_constraintEnd_toEndOf="@+id/textOnlyLocation"
+        app:layout_constraintStart_toStartOf="@+id/textOnlyLocation"
+        app:layout_constraintTop_toBottomOf="@+id/textOnlyLocation" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
@@ -84,31 +87,82 @@
         android:id="@+id/tvRepository"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:text="repo"
-        app:layout_constraintEnd_toEndOf="@+id/tv_fullname"
-        app:layout_constraintStart_toStartOf="@+id/tv_fullname"
-        app:layout_constraintTop_toBottomOf="@+id/tv_fullname" />
+        app:layout_constraintEnd_toEndOf="@+id/repoTextOnly"
+        app:layout_constraintStart_toStartOf="@+id/repoTextOnly"
+        app:layout_constraintTop_toBottomOf="@+id/repoTextOnly" />
 
     <TextView
         android:id="@+id/tvFollowing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:text="following"
-        app:layout_constraintEnd_toEndOf="@+id/tv_company"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tv_company"
-        app:layout_constraintTop_toBottomOf="@+id/tv_company" />
+        app:layout_constraintEnd_toStartOf="@+id/tvRepository"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOnlyFollowing" />
 
     <TextView
         android:id="@+id/tvFollowers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="followers"
-        app:layout_constraintEnd_toEndOf="@+id/tv_location"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tv_location"
-        app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toEndOf="@+id/tvRepository"
+        app:layout_constraintTop_toBottomOf="@+id/textOnlyFollowers" />
+
+    <TextView
+        android:id="@+id/textOnlyCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Companys"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textOnlyLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textOnlyFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Following"
+        app:layout_constraintEnd_toStartOf="@+id/repoTextOnly"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/repoTextOnly" />
+
+    <TextView
+        android:id="@+id/textOnlyFollowers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Followers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/repoTextOnly"
+        app:layout_constraintTop_toTopOf="@+id/repoTextOnly" />
+
+    <TextView
+        android:id="@+id/repoTextOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Repository"
+        app:layout_constraintEnd_toEndOf="@+id/tv_fullname"
+        app:layout_constraintStart_toStartOf="@+id/tv_fullname"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fullname" />
 </androidx.constraintlayout.widget.ConstraintLayout>
