@@ -10,4 +10,7 @@
     <string name="location">location</string>
     <string name="full_name">Full Name</string>
     <string name="username">username</string>
+    <string name="repository">Repository</string>
+    <string name="share_this">Share this!</string>
+    <string name="_0">0</string>
 </resources>

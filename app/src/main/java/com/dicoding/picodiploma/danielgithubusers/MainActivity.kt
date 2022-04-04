@@ -3,6 +3,7 @@ package com.dicoding.picodiploma.danielgithubusers
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
@@ -16,15 +17,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recycler: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.title = "Github Users OwO"
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         recycler = binding.rvUser
-        supportActionBar?.hide()
         val viewmodel = ViewModelProvider(this).get(ViewModelActivity::class.java)
         viewmodel.account().observe(this){
             showUserData(it)
         }
+        viewmodel.isLoading.observe(this, {
+            showLoading(it)
+        })
 
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             android.widget.SearchView.OnQueryTextListener {
@@ -32,12 +36,10 @@ class MainActivity : AppCompatActivity() {
                         viewmodel.setUserData(query)
                     return false
                 }
-
                 override fun onQueryTextChange(p0: String?): Boolean {
                     return false
                 }
             })
-
     }
 
     private fun showUserData(userList: List<ItemsItem>) {
@@ -55,4 +57,9 @@ class MainActivity : AppCompatActivity() {
 
         })
     }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+
 }

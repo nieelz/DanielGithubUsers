@@ -1,7 +1,10 @@
 package com.dicoding.picodiploma.danielgithubusers
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
@@ -28,6 +31,7 @@ class DetailUserActivity : AppCompatActivity() {
 
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -39,6 +43,9 @@ class DetailUserActivity : AppCompatActivity() {
         viewmodel.detailAccount().observe(this){
             showUserData(it)
         }
+        viewmodel.isLoading.observe(this, {
+            showLoading(it)
+        })
 
 
         val sectionsPagerAdapter = SectionsPagerAdapter(this)
@@ -50,6 +57,16 @@ class DetailUserActivity : AppCompatActivity() {
         }.attach()
 
         supportActionBar?.elevation = 0f
+        binding.buttonShare.setOnClickListener{
+            val sendIntent = Intent(Intent.ACTION_SEND)
+            sendIntent.type = "text/plain"
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "My application name")
+            val shareMessage = "Share profil ini"
+
+            sendIntent.putExtra(Intent.EXTRA_TEXT, shareMessage)
+            val shareIntentTo = Intent.createChooser(sendIntent, "title")
+            startActivity(shareIntentTo)
+        }
 
         setContentView(binding.root)
     }
@@ -64,4 +81,9 @@ class DetailUserActivity : AppCompatActivity() {
         binding.tvRepository.text = user.publicRepos.toString()
         Glide.with(binding.imageView).load(user.avatarUrl).into(binding.imageView)
     }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+
 }
