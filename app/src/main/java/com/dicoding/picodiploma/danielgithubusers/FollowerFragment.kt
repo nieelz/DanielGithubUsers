@@ -14,9 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.picodiploma.danielgithubusers.databinding.FragmentFollowerBinding
 
 
-
 class FollowerFragment : Fragment() {
-
 
     private lateinit var binding: FragmentFollowerBinding
     private lateinit var adapter: FollowAdapter

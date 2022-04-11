@@ -5,26 +5,26 @@ import retrofit2.http.*
 
 interface ApiService {
     @GET("search/users")
-    @Headers("Authorization: token ghp_123blabla123")
+    @Headers("Authorization: token ${BuildConfig.API_KEY}")
     fun getUser(
         @Query("q") username: String
     ): Call<UserResponse>
 
     @GET("users/{username}")
-    @Headers("Authorization: token ghp_123blabla123")
+    @Headers("Authorization: token ${BuildConfig.API_KEY}")
     fun getDetail(
         @Path("username") username: String
     ): Call<DetailUserResponse>
 
     @GET("users/{username}/followers")
-    @Headers("Authorization: token ghp_123blabla123")
-    fun getFollowing(
+    @Headers("Authorization: token ${BuildConfig.API_KEY}")
+    fun getFollowers(
         @Path("username") following: String
     ): Call <ArrayList<FollowUserResponseItem>>
 
     @GET("users/{username}/following")
-    @Headers("Authorization: token ghp_123blabla123")
-    fun getFollowers(
+    @Headers("Authorization: token ${BuildConfig.API_KEY}")
+    fun getFollowing(
         @Path("username") followers: String
     ): Call <ArrayList<FollowUserResponseItem>>
 

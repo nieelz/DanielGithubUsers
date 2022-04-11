@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recycler: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        supportActionBar?.title = "Github Users OwO"
+        supportActionBar?.title = "Github Users"
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
