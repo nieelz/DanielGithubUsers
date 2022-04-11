@@ -4,39 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.main.MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        tools:listitem="@layout/row_user" />
 
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:queryHint="Enter username"
-        android:iconifiedByDefault="false"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="16dp"
-        />
-
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="Enter username"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView">
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvUser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/row_user" />
-    </androidx.core.widget.NestedScrollView>
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <ProgressBar
@@ -50,5 +41,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

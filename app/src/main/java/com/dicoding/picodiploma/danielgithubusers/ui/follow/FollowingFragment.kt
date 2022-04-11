@@ -1,18 +1,20 @@
-package com.dicoding.picodiploma.danielgithubusers
+package com.dicoding.picodiploma.danielgithubusers.ui.follow
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.LiveData
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
+import com.dicoding.picodiploma.danielgithubusers.database.remote.response.FollowUserResponseItem
 import com.dicoding.picodiploma.danielgithubusers.databinding.FragmentFollowingBinding
+import com.dicoding.picodiploma.danielgithubusers.ui.detail.DetailUserActivity
+import com.dicoding.picodiploma.danielgithubusers.ui.detail.FollowAdapter
+import com.dicoding.picodiploma.danielgithubusers.ui.detail.ViewModelDetail
 
 
 class FollowingFragment : Fragment() {
@@ -22,20 +24,21 @@ class FollowingFragment : Fragment() {
     private lateinit var recycler: RecyclerView
 
     private val _isLoading = MutableLiveData<Boolean>()
-    val isLoading: LiveData<Boolean> = _isLoading
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View? {
-        binding = FragmentFollowingBinding.inflate(inflater,container,false)
+        savedInstanceState: Bundle?
+    ): View {
+        binding = FragmentFollowingBinding.inflate(inflater, container, false)
         recycler = binding.rvFollowing
-        val viewmodel = ViewModelProvider(requireActivity()).get(ViewModelDetail::class.java)
-        viewmodel.followingAccount().observe(viewLifecycleOwner){
+        val viewModel = ViewModelProvider(requireActivity())[ViewModelDetail::class.java]
+        viewModel.followingAccount().observe(viewLifecycleOwner) {
             showFollowingData(it)
         }
-        viewmodel.isLoading.observe(this, {
+        viewModel.isLoading.observe(viewLifecycleOwner) {
             showLoading(it)
-        })
+        }
         return binding.root
 
     }
@@ -45,7 +48,7 @@ class FollowingFragment : Fragment() {
         adapter = FollowAdapter(fol)
         recycler.adapter = adapter
         recycler.layoutManager = LinearLayoutManager(this@FollowingFragment.context)
-        adapter.setOnItemClickCallback(object:FollowAdapter.OnItemClickCallback{
+        adapter.setOnItemClickCallback(object : FollowAdapter.OnItemClickCallback {
             override fun onItemClicked(data: String) {
                 val intent = Intent(this@FollowingFragment.context, DetailUserActivity::class.java)
                 intent.putExtra(DetailUserActivity.USER_ID, data)

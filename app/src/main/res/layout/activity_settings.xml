@@ -4,23 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.follow.FollowingFragment">
+    tools:context=".ui.setting.SettingsActivity">
 
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
+    <Button
+        android:id="@+id/button_dark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:text="@string/dark_mode"
+        style="@style/ButtonOrange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvFollowing"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

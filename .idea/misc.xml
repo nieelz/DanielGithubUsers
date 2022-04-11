@@ -3,15 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/drawable/ic_baseline_apartment_24.xml" value="0.1895" />
+        <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/drawable/ic_baseline_dark_mode_24.xml" value="0.1895" />
+        <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/drawable/ic_bookmark_white.xml" value="0.239" />
+        <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/drawable/ic_bookmarked_white.xml" value="0.239" />
+        <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/drawable/ic_favorite.xml" value="0.3055" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/drawable/searchview_box.xml" value="0.227" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/activity_detail_user.xml" value="0.33" />
-        <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/activity_main.xml" value="0.23097826086956522" />
+        <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/activity_favorite.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/activity_setting.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/activity_settings.xml" value="0.1897644927536232" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/fragment_detail_user.xml" value="0.2296195652173913" />
+        <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/fragment_favorite.xml" value="0.25" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/fragment_follower.xml" value="0.25" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/fragment_following.xml" value="0.2296195652173913" />
+        <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/item_favorite.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/item_review.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/item_user.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/row_favorite.xml" value="0.22" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/layout/row_user.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/danie/AndroidStudioProjects/DanielGithubUsers/app/src/main/res/menu/menu.xml" value="0.31203703703703706" />
       </map>
     </option>
   </component>

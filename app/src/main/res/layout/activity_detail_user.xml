@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DetailUserActivity">
+    tools:context=".ui.detail.DetailUserActivity">
 
 
     <ProgressBar
@@ -53,6 +53,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/photo_profile"
         tools:srcCompat="@tools:sample/avatars" />
 
     <com.google.android.material.tabs.TabLayout
@@ -86,6 +87,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabs" />
+
 
     <TextView
         android:id="@+id/tvRepository"
@@ -169,11 +171,34 @@
         style="@style/ButtonOrange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="85dp"
+        android:layout_marginTop="84dp"
         android:text="@string/share_this"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button_favorite"
+        style="@style/ButtonOrange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:text="@string/favorite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button_delet"
+        style="@style/ButtonOrange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deletefavorite"
+        app:layout_constraintEnd_toEndOf="@+id/button_favorite"
+        app:layout_constraintStart_toStartOf="@+id/button_favorite"
+        app:layout_constraintTop_toBottomOf="@+id/button_favorite" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,4 +13,23 @@
     <string name="repository">Repository</string>
     <string name="share_this">Share this!</string>
     <string name="_0">0</string>
+    <string name="menu_1">Favorite</string>
+    <string name="menu_2">Setting</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="setting">Setting</string>
+    <string name="favorite">Favorite</string>
+
+    <string name="dark_mode">Dark Mode</string>
+    <string name="save_bookmark">save_bookmark</string>
+
+
+    <string name="addedFavorite">Berhasil memfavoritkan akun ♡</string>
+    <string name="delete">Berhasil menghapus favorit</string>
+    <string name="deletefavorite">Delete Favorite</string>
+    <string name="photo_profile">Photo Profile</string>
+    <string name="row_favorite">Row Favorite</string>
+    <string name="row_user">Row User</string>
+
+
 </resources>
