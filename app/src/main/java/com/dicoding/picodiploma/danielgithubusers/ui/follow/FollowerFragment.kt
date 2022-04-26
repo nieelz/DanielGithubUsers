@@ -16,7 +16,6 @@ import com.dicoding.picodiploma.danielgithubusers.ui.detail.DetailUserActivity
 import com.dicoding.picodiploma.danielgithubusers.ui.detail.FollowAdapter
 import com.dicoding.picodiploma.danielgithubusers.ui.detail.ViewModelDetail
 
-
 class FollowerFragment : Fragment() {
 
     private lateinit var binding: FragmentFollowerBinding
